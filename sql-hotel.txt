@@ -21,8 +21,7 @@ WHERE `name` LIKE 'd%';
 - Calcola il totale degli ordini accepted
 SELECT COUNT(`id`) AS `Numero prenotazioni accettate`
 FROM `pagamenti`
-WHERE `status` = 'accepted'
-GROUP BY `status`;
+WHERE `status` = 'accepted';
 
 - Qual è il prezzo massimo pagato?
 SELECT MAX(`price`) AS 'Prezzo più alto pagato'
