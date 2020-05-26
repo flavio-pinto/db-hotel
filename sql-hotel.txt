@@ -25,3 +25,16 @@ WHERE `status` = 'accepted'
 GROUP BY `status`;
 
 - Qual è il prezzo massimo pagato?
+SELECT MAX(`price`) AS 'Prezzo più alto pagato'
+FROM `pagamenti`
+WHERE `status` = 'accepted';
+
+- Seleziona gli ospiti riconosciuti con patente e nati nel 1975
+SELECT *
+FROM `ospiti`
+WHERE `document_type` = 'driver license'
+AND YEAR(`date_of_birth`) = '1975';
+
+- Quanti posti letto ha l’hotel in totale?
+SELECT SUM(`beds`) AS "Numero totale posti letto dell'hotel"
+FROM `stanze`;
